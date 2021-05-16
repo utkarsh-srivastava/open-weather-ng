@@ -1,1 +1,18 @@
-listing
+<div class="container">
+    <h2>Forecast Table</h2>
+    <p>This table displayd the forecasted data of next 5 days at 9:00 for <b>{{cityName}}</b>:</p>
+    <table class="table table-hover">
+      <thead>
+        <tr class="cursor-pointer">
+          <th>Temperature(&#x2103;)</th>
+          <th>Sea level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of forcastedList">
+          <td>{{data.temperature | number}}</td>
+          <td>{{data.sealevel }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
