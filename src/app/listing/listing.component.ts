@@ -26,4 +26,8 @@ export class ListingComponent implements OnInit {
         this.forcastedList = forcastedList;
       });
   }
+
+  navigateBack() {
+    window.history.back();
+  }
 }
