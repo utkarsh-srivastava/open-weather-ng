@@ -1,1 +1,22 @@
-<p>listings works!</p>
+<div class="container">
+    <h2>Weather Table</h2>
+    <p>This table displayd the list of 5 Europian cities weather report:</p>
+    <table class="table table-hover">
+      <thead>
+        <tr class="cursor-pointer">
+          <th>City Name</th>
+          <th>Temperature</th>
+          <th>Sunrise time</th>
+          <th>Sunset time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of weatherReports">
+          <td>{{report.name}}</td>
+          <td>{{report.main.temp}}</td>
+          <td>{{report.sys.sunrise * 1000 | date:'shortTime':'GMT'}}</td>
+          <td>{{report.sys.sunset * 1000 | date:'shortTime':'GMT'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
