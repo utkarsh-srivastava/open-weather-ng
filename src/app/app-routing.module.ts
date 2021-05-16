@@ -5,7 +5,7 @@ import { ListingComponent } from './listing/listing.component'
 
 const routes: Routes = [
   { path: 'listings', component: ListingsComponent},
-  { path: 'listing', component: ListingComponent},
+  { path: 'details/:name', component: ListingComponent},
 ];
 
 @NgModule({

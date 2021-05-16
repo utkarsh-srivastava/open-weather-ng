@@ -11,8 +11,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let report of weatherReports" [routerLink]="['/detail', report.name]">
-          <td>{{report.name}}</td>
+        <tr *ngFor="let report of weatherReports" [routerLink]="['/details', report.name]">
+          <td><li><a href="javascript:void(0);">{{report.name}}</a></li></td>
           <td>{{report.temperature | number}}</td>
           <td>{{report.sunrise * 1000 | date:'shortTime':'GMT'}}</td>
           <td>{{report.sunset * 1000 | date:'shortTime':'GMT'}}</td>
