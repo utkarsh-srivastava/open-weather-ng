@@ -5,17 +5,17 @@
       <thead>
         <tr class="cursor-pointer">
           <th>City Name</th>
-          <th>Temperature</th>
-          <th>Sunrise time</th>
-          <th>Sunset time</th>
+          <th>Temperature(&#x2103;)</th>
+          <th>Sunrise time(GMT)</th>
+          <th>Sunset time(GMT)</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let report of weatherReports">
+        <tr *ngFor="let report of weatherReports" [routerLink]="['/detail', report.name]">
           <td>{{report.name}}</td>
-          <td>{{report.main.temp}}</td>
-          <td>{{report.sys.sunrise * 1000 | date:'shortTime':'GMT'}}</td>
-          <td>{{report.sys.sunset * 1000 | date:'shortTime':'GMT'}}</td>
+          <td>{{report.temperature | number}}</td>
+          <td>{{report.sunrise * 1000 | date:'shortTime':'GMT'}}</td>
+          <td>{{report.sunset * 1000 | date:'shortTime':'GMT'}}</td>
         </tr>
       </tbody>
     </table>

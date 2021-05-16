@@ -10,7 +10,7 @@ import { WeatherDao } from '../weather.dao.service';
 export class ListingsComponent implements OnInit {
 
   weatherReports : any = [];
-  cityNames = ['London,uk', 'Paris,fr'];
+  cityNames = ['London', 'Paris', 'Germany', 'Poland', 'Belgium'];
 
   constructor(
     private dao: WeatherDao
