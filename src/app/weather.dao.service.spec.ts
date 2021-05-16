@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Weather.DaoService } from './weather.dao.service';
+import { WeatherDao } from './weather.dao.service';
 
-describe('Weather.DaoService', () => {
-  let service: Weather.DaoService;
+describe(' WeatherDao', () => {
+  let service: WeatherDao;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Weather.DaoService);
+    service = TestBed.inject( WeatherDao);
   });
 
   it('should be created', () => {
